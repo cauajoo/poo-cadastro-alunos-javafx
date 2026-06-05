@@ -39,25 +39,27 @@ public class CadastroController {
     @FXML
     private Button id_btm_cad;
 
-}
 
-public void initialize() {
+    public void initialize() {
 
-    animarFlutuacao(forma_um_cad, -15, 3000);
-    animarFlutuacao(forma_dois_cad, 15, 2500);
-    animarFlutuacao(forma_tres_cad, -10, 3000);
-    animarFlutuacao(forma_quatro_cad, 10, 2500);
+        animarFlutuacao(forma_um_cad, -15, 3000);
+        animarFlutuacao(forma_dois_cad, 20, 2500);
+        animarFlutuacao(forma_tres_cad, -10, 3000);
+        animarFlutuacao(forma_quatro_cad, 10, 2500);
 
-}
+    }
 
 
-private void animarFlutuacao(Node node, double distancia, double duracao){
+    private void animarFlutuacao(Node node, double distancia, double duracao) {
 
-    if (node == null) return;
-    TranslateTransition transition = new TranslateTransition(Duration.millis(duracao), node);
-    transition.setByY(distancia);
-    transition.setCycleCount(TranslateTransition.INDEFINITE);
-    transition.setAutoReverse(true);
-    transition.setInterpolator(Interpolator.EASE_BOTH);
-    transition.play();
+        if (node == null) return;
+        TranslateTransition transition = new TranslateTransition(Duration.millis(duracao), node);
+        transition.setByY(distancia);
+        transition.setCycleCount(TranslateTransition.INDEFINITE);
+        transition.setAutoReverse(true);
+        transition.setInterpolator(Interpolator.EASE_BOTH);
+        transition.play();
+    }
+
+
 }

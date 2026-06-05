@@ -1,9 +1,16 @@
 module br.com.poo.registrationsystem {
     requires javafx.controls;
     requires javafx.fxml;
-
-    opens br.com.poo.registrationsystem.controller to javafx.fxml;
+    requires java.desktop;
 
     exports br.com.poo.registrationsystem;
+    opens br.com.poo.registrationsystem to javafx.fxml;
+
     exports br.com.poo.registrationsystem.controller;
+    opens br.com.poo.registrationsystem.controller to javafx.fxml;
+
+    exports br.com.poo.registrationsystem.validation;
+    opens br.com.poo.registrationsystem.validation to javafx.fxml;
+    exports br.com.poo.registrationsystem.model;
+    opens br.com.poo.registrationsystem.model to javafx.fxml;
 }
