@@ -10,8 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #6640C8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #6640C8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poo.registrationsystem.controller.CadastroController">
    <children>
+      <ImageView fitHeight="700.0" fitWidth="435.0" layoutX="571.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/QuadricBranCad.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="616.0" fitWidth="499.0" layoutX="438.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/QuadCad.png" />
@@ -68,27 +73,27 @@
             <Font name="Artifakt Element Italic" size="16.0" />
          </font>
       </Label>
-      <ImageView fx:id="logo_cad" fitHeight="123.0" fitWidth="131.0" layoutX="49.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logo_cad" fitHeight="145.0" fitWidth="160.0" layoutX="44.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/LogoCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_tres_cad" fitHeight="128.0" fitWidth="134.0" layoutX="273.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forma_tres_cad" fitHeight="128.0" fitWidth="134.0" layoutX="253.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/QuadAzulCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_dois_cad" fitHeight="128.0" fitWidth="158.0" layoutX="65.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forma_dois_cad" fitHeight="170.0" fitWidth="181.0" layoutX="72.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/CircVerdCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_um_cad" fitHeight="107.0" fitWidth="92.0" layoutX="271.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forma_um_cad" fitHeight="107.0" fitWidth="92.0" layoutX="256.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/TriVermCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_quatro_cad" fitHeight="143.0" fitWidth="113.0" layoutX="65.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forma_quatro_cad" fitHeight="149.0" fitWidth="146.0" layoutX="65.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" rotate="-12.2">
          <image>
             <Image url="@../../../../img/EstrRosaCad.png" />
          </image>
