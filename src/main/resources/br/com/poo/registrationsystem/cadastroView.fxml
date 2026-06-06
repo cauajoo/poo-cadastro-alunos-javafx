@@ -22,10 +22,10 @@
             <Image url="@../../../../img/QuadCad.png" />
          </image>
       </ImageView>
-      <TextField fx:id="id_nome_cad" layoutX="500.0" layoutY="230.0" prefHeight="35.0" prefWidth="350.0" text="Digite seu nome..." />
-      <TextField fx:id="id_telefone_cad" layoutX="695.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" text="(00) 98647-5400" />
-      <TextField fx:id="id_email_cad" layoutX="500.0" layoutY="301.0" prefHeight="35.0" prefWidth="350.0" text="Digite seu email..." />
-      <TextField fx:id="id_cpf_cad" layoutX="500.0" layoutY="443.0" prefHeight="35.0" prefWidth="350.0" text="123.456.789-00" />
+      <TextField fx:id="idNomeCad" layoutX="500.0" layoutY="230.0" prefHeight="35.0" prefWidth="350.0" promptText="Digite seu nome..." />
+      <TextField fx:id="idTelefoneCad" layoutX="695.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="(00) 90000-0000" />
+      <TextField fx:id="idEmailCad" layoutX="500.0" layoutY="301.0" prefHeight="35.0" prefWidth="350.0" promptText="Digite seu email..." />
+      <TextField fx:id="idCpfCad" layoutX="500.0" layoutY="443.0" prefHeight="35.0" prefWidth="350.0" promptText="000.000.000-00" />
       <Label layoutX="600.0" layoutY="122.0" prefHeight="51.0" prefWidth="157.0" text="Cadastre-se!" textFill="#6640c8">
          <font>
             <Font name="Swiss 721 Bold BT" size="24.0" />
@@ -36,10 +36,10 @@
             <Font name="Artifakt Element Italic" size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="id_data_cad" layoutX="500.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" />
-      <PasswordField fx:id="id_senha_cad" layoutX="500.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" />
-      <PasswordField fx:id="id_confirmS_cad" layoutX="695.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" />
-      <Button fx:id="id_btm_cad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FD5A46;" text="Cadastrar" textFill="WHITE">
+      <DatePicker fx:id="idDataCad" layoutX="500.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="00/00/0000" />
+      <PasswordField fx:id="idSenhaCad" layoutX="500.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Mínimo de 8 caracteres..." />
+      <PasswordField fx:id="idConfirmCad" layoutX="695.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Repita a senha criada..." />
+      <Button fx:id="idBtmCad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FF5E4D; -fx-background-radius: 8px; -fx-background-insets: 1px; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, -5);" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Artifakt Element Bold" size="19.0" />
          </font></Button>
@@ -73,27 +73,27 @@
             <Font name="Artifakt Element Italic" size="16.0" />
          </font>
       </Label>
-      <ImageView fx:id="logo_cad" fitHeight="145.0" fitWidth="160.0" layoutX="44.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logoCad" fitHeight="145.0" fitWidth="160.0" layoutX="44.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/LogoCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_tres_cad" fitHeight="128.0" fitWidth="134.0" layoutX="253.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="formaTresCad" fitHeight="128.0" fitWidth="134.0" layoutX="253.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/QuadAzulCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_dois_cad" fitHeight="170.0" fitWidth="181.0" layoutX="72.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="formaDoisCad" fitHeight="170.0" fitWidth="181.0" layoutX="72.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/CircVerdCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_um_cad" fitHeight="107.0" fitWidth="92.0" layoutX="256.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="formaUmCad" fitHeight="107.0" fitWidth="92.0" layoutX="256.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/TriVermCad.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="forma_quatro_cad" fitHeight="149.0" fitWidth="146.0" layoutX="65.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" rotate="-12.2">
+      <ImageView fx:id="formaQuatroCad" fitHeight="149.0" fitWidth="146.0" layoutX="65.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" rotate="-12.2">
          <image>
             <Image url="@../../../../img/EstrRosaCad.png" />
          </image>
