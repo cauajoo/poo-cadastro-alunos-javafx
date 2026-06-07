@@ -8,8 +8,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CadastroAlunoController {
 
@@ -43,24 +41,16 @@ public class CadastroAlunoController {
     @FXML
     private TextField idTurnoAlu;
 
-    private static final List<Aluno> alunos = new ArrayList<>();
-
     @FXML
     private void cadastrarAluno(ActionEvent event) {
 
-        Aluno aluno = new Aluno();
-
-        aluno.setNome(idNomeAlu.getText());
-        aluno.setDataDeNascimento(String.valueOf(idDataNasAlu.getValue()));
-        aluno.setResponsaveis(idResponsavelAlu.getText());
-        aluno.setBairro(idBairroAlu.getText());
-        aluno.setRua(idRuaAlu.getText());
-        aluno.setNumeroCasa(Integer.parseInt(idNumCasAlu.getText()));
-        aluno.setMatricula(Integer.parseInt(idMatriculaAlu.getText()));
-        aluno.setTurno(idTurnoAlu.getText());
-        aluno.setDisciplinas(idDiscipllinasAlu.getText());
-
-        alunos.add(aluno);
+        Aluno aluno = new Aluno(idNomeAlu.getText(), idDataNasAlu.getValue(), idResponsavelAlu.getText(),
+                idBairroAlu.getText(),
+                idRuaAlu.getText(),
+                idNumCasAlu.getText(),
+                idMatriculaAlu.getText(),
+                idTurnoAlu.getText(),
+                idDiscipllinasAlu.getText());
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Cadastro");
