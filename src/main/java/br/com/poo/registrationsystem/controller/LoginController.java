@@ -1,6 +1,6 @@
 package br.com.poo.registrationsystem.controller;
 
-import br.com.poo.registrationsystem.model.Usuario;
+import br.com.poo.registrationsystem.users.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,10 +9,9 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.util.List;
 
-import static com.sun.javafx.scene.control.skin.FXVK.init;
+import static br.com.poo.registrationsystem.repository.Repositorio.buscarTodoUsuario;
 
 public class LoginController {
 
@@ -28,11 +27,7 @@ public class LoginController {
     @FXML
     private TextField idUsuarioLog;
 
-    private List<Usuario> usuarios;
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
-    }
+    List<Usuario> usuarios = buscarTodoUsuario();
 
     @FXML
     public void realizarLogin(ActionEvent event) {
