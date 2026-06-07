@@ -1,4 +1,4 @@
-package br.com.poo.registrationsystem.model;
+package br.com.poo.registrationsystem.users;
 
 import java.time.LocalDate;
 

@@ -76,10 +76,8 @@ public class CadastroController {
                 "-fx-border-width: 3px; -fx-border-radius: 8px; " +
                 "-fx-font-weight: bold; -fx-text-fill: white; ";
 
-        // 1. Estado Normal (Sombra no topo-direito: 5, -5)
         idBtmCad.setStyle(visualBase + "-fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, -5);");
 
-        // 2. Mouse Entrou: Levanta o botão (Vem para a Esquerda e para Baixo)
         idBtmCad.setOnMouseEntered(e -> {
             idBtmCad.setCursor(javafx.scene.Cursor.HAND);
             idBtmCad.setTranslateX(-3);
@@ -87,21 +85,18 @@ public class CadastroController {
             idBtmCad.setStyle(visualBase + "-fx-effect: dropshadow(one-pass-box, black, 0, 0, 8, -8);");
         });
 
-        // 3. Mouse Saiu: Volta ao normal
         idBtmCad.setOnMouseExited(e -> {
             idBtmCad.setTranslateX(0);
             idBtmCad.setTranslateY(0);
             idBtmCad.setStyle(visualBase + "-fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, -5);");
         });
 
-        // 4. Clicou: Afunda o botão (Vai para a Direita e para Cima, de encontro à sombra)
         idBtmCad.setOnMousePressed(e -> {
             idBtmCad.setTranslateX(3);
             idBtmCad.setTranslateY(-3);
             idBtmCad.setStyle(visualBase + "-fx-effect: dropshadow(one-pass-box, black, 0, 0, 2, -2);");
         });
 
-        // 5. Soltou o clique: Volta para a posição levantada
         idBtmCad.setOnMouseReleased(e -> {
             idBtmCad.setTranslateX(-3);
             idBtmCad.setTranslateY(3);
@@ -118,6 +113,10 @@ public class CadastroController {
         transition.setAutoReverse(true);
         transition.setInterpolator(Interpolator.EASE_BOTH);
         transition.play();
+    }
+
+    private void realizarCadastro() {
+
     }
 
 
