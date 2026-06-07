@@ -1,6 +1,6 @@
 package br.com.poo.registrationsystem.validation;
 
-import br.com.poo.registrationsystem.model.Usuario;
+import br.com.poo.registrationsystem.users.Usuario;
 import java.util.List;
 
 public class Validacoes {
@@ -36,13 +36,13 @@ public class Validacoes {
 
     public static String validaSenha(String senha, String confirmacao) {
         if (senha == null || senha.trim().isEmpty()) {
-            return "Erro: A senha não pode estar vazia.";
+            return "A senha não pode estar vazia.";
         }
         if (senha.length() < 8) {
-            return "Erro: A senha deve ter pelo menos 8 caracteres.";
+            return "A senha deve ter pelo menos 8 caracteres.";
         }
         if (!senha.equals(confirmacao)) {
-            return "Erro: As senhas não coincidem.";
+            return "As senhas não coincidem.";
         }
         return null;
     }

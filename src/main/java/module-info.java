@@ -11,6 +11,6 @@ module br.com.poo.registrationsystem {
 
     exports br.com.poo.registrationsystem.validation;
     opens br.com.poo.registrationsystem.validation to javafx.fxml;
-    exports br.com.poo.registrationsystem.model;
-    opens br.com.poo.registrationsystem.model to javafx.fxml;
+    exports br.com.poo.registrationsystem.users;
+    opens br.com.poo.registrationsystem.users to javafx.fxml;
 }
