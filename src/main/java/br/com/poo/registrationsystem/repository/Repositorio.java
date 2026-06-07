@@ -12,19 +12,27 @@ public class Repositorio{
     private static List<Aluno> alunos = new ArrayList<>();
 
     public static void salvarUsuario(Usuario usuario){
+
         usuarios.add(usuario);
+
     }
 
     public static void salvarAlunos(Aluno aluno){
+
         alunos.add(aluno);
+
     }
 
     public static List<Aluno> buscarTodoAluno() {
+
         return alunos;
+
     }
 
     public static List<Usuario> buscarTodoUsuario() {
+
         return usuarios;
+
     }
 
 

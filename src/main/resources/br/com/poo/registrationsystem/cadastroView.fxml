@@ -23,8 +23,9 @@
          </image>
       </ImageView>
       <TextField fx:id="idNomeCad" layoutX="500.0" layoutY="230.0" prefHeight="35.0" prefWidth="350.0" promptText="Digite seu nome..." />
-      <TextField fx:id="idTelefoneCad" layoutX="695.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="(00) 90000-0000" />
       <TextField fx:id="idEmailCad" layoutX="500.0" layoutY="301.0" prefHeight="35.0" prefWidth="350.0" promptText="Digite seu email..." />
+      <DatePicker fx:id="idDataCad" layoutX="500.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="00/00/0000" />
+      <TextField fx:id="idTelefoneCad" layoutX="695.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="(00) 90000-0000" />
       <TextField fx:id="idCpfCad" layoutX="500.0" layoutY="443.0" prefHeight="35.0" prefWidth="350.0" promptText="000.000.000-00" />
       <Label layoutX="600.0" layoutY="122.0" prefHeight="51.0" prefWidth="157.0" text="Cadastre-se!" textFill="#6640c8">
          <font>
@@ -36,18 +37,17 @@
             <Font name="Artifakt Element Italic" size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="idDataCad" layoutX="500.0" layoutY="372.0" prefHeight="35.0" prefWidth="155.0" promptText="00/00/0000" />
-      <PasswordField fx:id="idSenhaCad" layoutX="500.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Mínimo de 8 caracteres..." />
-      <PasswordField fx:id="idConfirmCad" layoutX="695.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Repita a senha criada..." />
-      <Button fx:id="idBtmCad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FF5E4D; -fx-background-radius: 8px; -fx-background-insets: 1px; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, -5);" text="Cadastrar" textFill="WHITE">
-         <font>
-            <Font name="Artifakt Element Bold" size="19.0" />
-         </font></Button>
       <Label layoutX="500.0" layoutY="273.0" prefHeight="25.0" prefWidth="70.0" text="Email:">
          <font>
             <Font name="Artifakt Element Italic" size="18.0" />
          </font>
       </Label>
+      <PasswordField fx:id="idSenhaCad" layoutX="500.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Mínimo de 8 caracteres..." />
+      <PasswordField fx:id="idConfirmCad" layoutX="695.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Repita a senha criada..." />
+      <Button fx:id="idBtmCad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font name="Artifakt Element Bold" size="19.0" />
+         </font></Button>
       <Label layoutX="500.0" layoutY="346.0" prefHeight="26.0" prefWidth="155.0" text="Data de Nascimento:">
          <font>
             <Font name="Artifakt Element Italic" size="14.0" />
@@ -98,7 +98,7 @@
             <Image url="@../../../../img/EstrRosaCad.png" />
          </image>
       </ImageView>
-      <Label fx:id="mensagem_erro" alignment="CENTER" layoutX="500.0" layoutY="576.0" prefHeight="25.0" prefWidth="350.0" textFill="#fd5a46">
+      <Label fx:id="msgErroLog" alignment="CENTER" layoutX="500.0" layoutY="576.0" prefHeight="25.0" prefWidth="350.0" textFill="#fd5a46">
          <font>
             <Font name="Anybody Regular" size="12.0" />
          </font>

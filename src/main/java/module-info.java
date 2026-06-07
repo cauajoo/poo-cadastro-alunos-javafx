@@ -2,6 +2,8 @@ module br.com.poo.registrationsystem {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires javafx.graphics;
+    requires javafx.base;
 
     exports br.com.poo.registrationsystem;
     opens br.com.poo.registrationsystem to javafx.fxml;
