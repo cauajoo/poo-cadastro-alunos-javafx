@@ -1,6 +1,6 @@
 package br.com.poo.registrationsystem.controller;
 
-import br.com.poo.registrationsystem.model.Aluno;
+import br.com.poo.registrationsystem.users.Aluno;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
