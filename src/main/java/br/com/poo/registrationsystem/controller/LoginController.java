@@ -2,7 +2,10 @@ package br.com.poo.registrationsystem.controller;
 
 import br.com.poo.registrationsystem.model.Usuario;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -57,4 +60,25 @@ public class LoginController {
         }
     }
 
+    @FXML
+    public void linkarCadastro(ActionEvent event) {
+
+        try {
+
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource(
+                            "/br/com/poo/registrationsystem/view/cadastroView.fxml"
+                    )
+            );
+
+            Stage stage = (Stage) idLinkLog.getScene().getWindow();
+
+            stage.setScene(
+                    new Scene(loader.load())
+            );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
