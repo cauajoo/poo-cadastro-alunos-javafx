@@ -18,6 +18,7 @@ public class Usuario {
         this.telefone = telefone;
         this.cpf = cpf;
         this.senha = senha;
+
     }
 
     public String getNome() {

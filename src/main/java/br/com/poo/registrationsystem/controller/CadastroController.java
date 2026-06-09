@@ -245,6 +245,7 @@ public class CadastroController {
             msgErroLog.setTextFill(javafx.scene.paint.Color.RED);
             msgErroLog.setText(erro);
 
+
         } else {
 
             msgErroLog.setText("");

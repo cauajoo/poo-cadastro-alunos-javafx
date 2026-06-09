@@ -47,4 +47,5 @@ public class Aluno {
     public void setNotas(Notas notas) {
         this.notas = notas;
     }
+
 }

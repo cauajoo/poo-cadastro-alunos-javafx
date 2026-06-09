@@ -6,6 +6,7 @@ import br.com.poo.registrationsystem.users.Usuario;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 public class Validacoes {
 
@@ -139,7 +140,7 @@ public class Validacoes {
 
     }
 
-    private static boolean isEmailValido(String email) {
+    public static boolean isEmailValido(String email) {
 
         String expressaoRegular = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
 

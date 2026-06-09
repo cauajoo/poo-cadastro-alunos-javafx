@@ -1,6 +1,8 @@
 package br.com.poo.registrationsystem.users;
-import br.com.poo.registrationsystem.users.Aluno;
+import br.com.poo.registrationsystem.controller.CadastroAlunoController;
+import br.com.poo.registrationsystem.controller.CadastroController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Notas {
@@ -27,3 +29,4 @@ public class Notas {
         return nota3;
     }
 }
+
