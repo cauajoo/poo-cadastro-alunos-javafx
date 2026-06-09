@@ -3,24 +3,21 @@ package br.com.poo.registrationsystem.validation;
 import br.com.poo.registrationsystem.users.Usuario;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.Objects;
 
 public class Validacoes {
 
     public static Usuario validarLogin(List<Usuario> usuarios, String email, String senha) {
 
-        for (Usuario usuario : usuarios) {
-
-            if (usuario.getEmail().equals(email) && usuario.getSenha().equals(senha)) {
-
-                return usuario;
-
-            }
+        if (usuarios == null || email == null || senha == null) {
+            return null;
         }
 
-        return null;
+        return usuarios.stream()
+                .filter(u -> Objects.equals(email, u.getEmail()) && Objects.equals(senha, u.getSenha()))
+                .findFirst()
+                .orElse(null);
     }
 
     public static String validaNome(String nome){
@@ -147,17 +144,5 @@ public class Validacoes {
 
         return email.matches(expressaoRegular);
     }
-
-    public static void numMatricula() {
-
-        Random random = new Random();
-
-        for (int i = 0; i < 5; i++) {
-
-            int matricula = random.nextInt(100) + 1;
-        }
-    }
-
-
 
 }
