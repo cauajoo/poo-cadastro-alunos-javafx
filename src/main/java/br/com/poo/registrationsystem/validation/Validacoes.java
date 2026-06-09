@@ -5,6 +5,7 @@ import br.com.poo.registrationsystem.users.Usuario;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 public class Validacoes {
 
@@ -138,11 +139,33 @@ public class Validacoes {
 
     }
 
-    private static boolean isEmailValido(String email) {
+    public static boolean isEmailValido(String email) {
 
         String expressaoRegular = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
 
         return email.matches(expressaoRegular);
+    }
+
+    public static int gerarMatricula() {
+
+        Random random = new Random();
+
+        return random.nextInt(9000) + 10000;
+    }
+
+    public static String validarTurno(String turno) {
+
+        if (turno == null) {
+
+            return ("Erro: Turno inválido!");
+        }
+        turno = turno.trim().toLowerCase();
+
+        if (turno.equals("Manhã") || turno.equals("Tarde")) {
+            System.out.println("Turno válido");
+        }else {
+            System.out.println("Erro: Só é possível digitar Manhã ou Tarde!");
+        }
     }
 
 }

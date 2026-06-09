@@ -1,28 +1,22 @@
-/* 1. O Fundo do seu Menu Lateral Roxo */
 .menu-lateral {
-    -fx-background-color: #6C5CE7; /* O seu roxo exato */
+    -fx-background-color: #6C5CE7;
     -fx-border-color: black;
-    -fx-border-width: 0 3px 0 0; /* Linha preta grossa só na direita */
+    -fx-border-width: 0 3px 0 0;
 }
 
-/* 2. O Fundo da Tela (Tentativa de Quadriculado em CSS puro) */
 .fundo-quadriculado {
     -fx-background-color: #F8F9FA;
-    /* Nota: O JavaFX CSS não suporta grids complexos como a web.
-       Para o quadriculado perfeito, o ideal é colocar uma imagem no Scene Builder! */
 }
 
-/* 3. A Barra Azul Superior (Cabeçalho) */
 .cabecalho-azul {
     -fx-background-color: #058CD7; /* Azul do topo */
     -fx-background-radius: 12px;
     -fx-border-color: black;
     -fx-border-width: 3px;
     -fx-border-radius: 12px;
-    -fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, 5); /* Sombra sólida */
+    -fx-effect: dropshadow(one-pass-box, black, 0, 0, 5, 5);
 }
 
-/* 4. O Botão Laranja "Registrar Novo Aluno" */
 .botao-destaque {
     -fx-background-color: #FF5E4D;
     -fx-background-radius: 8px;
@@ -39,10 +33,9 @@
     -fx-cursor: hand;
     -fx-translate-y: 2px;
     -fx-translate-x: 2px;
-    -fx-effect: dropshadow(one-pass-box, black, 0, 0, 2, 2); /* Botão afunda um pouco */
+    -fx-effect: dropshadow(one-pass-box, black, 0, 0, 2, 2);
 }
 
-/* 5. Item de Menu NORMAL (Ex: Estudantes, Turmas) */
 .botao-menu {
     -fx-background-color: transparent;
     -fx-text-fill: white;
@@ -56,7 +49,6 @@
     -fx-text-fill: #E0E0E0;
 }
 
-/* 6. Item de Menu ATIVO (Ex: Painel) */
 .botao-menu-ativo {
     -fx-background-color: #8C7CFF;;
     -fx-background-radius: 8px;
@@ -70,7 +62,6 @@
     -fx-effect: dropshadow(one-pass-box, black, 0, 0, 4, 4);
 }
 
-/* 7. O Cartão "Atividade Recente" (Para você usar nas próximas telas) */
 .cartao-brutalista {
     -fx-background-color: white;
     -fx-background-radius: 12px;
@@ -81,21 +72,18 @@
 }
 
 .fundo-quadriculado {
-    /* A cor de fundo base (aquele branco acinzentado) */
+
     -fx-background-color: #F8F9FA;
 
-    /* A barra / no começo diz para o Java procurar na raiz da pasta resources */
     -fx-background-image: url("../../../../img/QuadricPretoHom.png");
 
-    /* Multiplica a imagem para todos os lados! */
     -fx-background-repeat: repeat;
 
     -fx-background-size: 70px 70px;
 }
 .botao-destaque, .botao-menu, .botao-menu-ativo {
-    /* Isso remove qualquer linha extra de contorno que o JavaFX tenta criar */
+
     -fx-background-insets: 0;
 
-    /* Isso garante que a borda preta acompanhe perfeitamente a curva do botão */
     -fx-border-radius: 8px;
 }
