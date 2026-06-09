@@ -156,6 +156,21 @@ public class LoginController {
             alert.setContentText("Bem-vindo, " + usuarioLogado.getNome() + "!");
             alert.showAndWait();
 
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/poo/registrationsystem/homeView.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) idBtnLog.getScene().getWindow();
+
+                stage.setScene(new Scene(root));
+                stage.setTitle("Sistema de Registro - Home");
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Erro ao tentar abrir a Home. Verifique o caminho do arquivo!");
+            }
+
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro de Autenticação");

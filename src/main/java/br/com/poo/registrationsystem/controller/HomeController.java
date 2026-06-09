@@ -3,9 +3,13 @@ package br.com.poo.registrationsystem.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HomeController {
 
@@ -69,6 +73,25 @@ public class HomeController {
     @FXML
     private void cadastrarNotas() {
         carregarPagina("cadastroNotasView.fxml");
+    }
+
+    @FXML
+    private void realizarLogout() {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/poo/registrationsystem/view/loginView.fxml"));
+            Parent root = loader.load();
+
+            Stage stageAtual = (Stage) idImgSair.getScene().getWindow();
+
+            stageAtual.setScene(new Scene(root));
+            stageAtual.setTitle("Login - Sistema de Registro");
+            stageAtual.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Erro ao realizar logout: " + e.getMessage());
+        }
     }
 
 

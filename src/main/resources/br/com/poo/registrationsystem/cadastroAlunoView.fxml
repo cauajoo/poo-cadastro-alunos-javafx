@@ -1,32 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poo.registrationsystem.controller.CadastroAlunoController">
+<AnchorPane prefHeight="487.0" prefWidth="600.0" style="-fx-background-color: #009A5E;" stylesheets="@home.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poo.registrationsystem.controller.CadastroAlunoController">
    <children>
-      <TextField fx:id="idBairroAlu" layoutX="14.0" layoutY="202.0" />
-      <TextField fx:id="idNumCasAlu" layoutX="14.0" layoutY="161.0" />
-      <TextField fx:id="idRuaAlu" layoutX="14.0" layoutY="115.0" />
-      <TextField fx:id="idMatriculaAlu" layoutX="14.0" layoutY="297.0" />
-      <TextField fx:id="idResponsavelAlu" layoutX="14.0" layoutY="247.0" />
-      <TextField fx:id="idTurnoAlu" layoutX="425.0" layoutY="45.0" />
-      <TextField fx:id="idNomeAlu" layoutX="14.0" layoutY="39.0" />
-      <TextField fx:id="idDiscipllinasAlu" layoutX="425.0" layoutY="91.0" />
-      <Button fx:id="btnCadastrarAlu" layoutX="474.0" layoutY="247.0" mnemonicParsing="false" text="Button" />
-      <DatePicker fx:id="idDataNasAlu" layoutX="412.0" layoutY="161.0" />
-      <Label layoutX="178.0" layoutY="165.0" text="Digite o N° da Casa do Aluno:" />
-      <Label layoutX="606.0" layoutY="165.0" text="Digite a data de nascimento do Aluno:" />
-      <Label layoutX="606.0" layoutY="99.0" text="Digite quais Disciplinas terá o Aluno:" />
-      <Label layoutX="606.0" layoutY="52.0" text="Digite qual o Turno de Ensino do Aluno:" />
-      <Label layoutX="178.0" layoutY="43.0" text="Digite o Nome do Aluno" />
-      <Label layoutX="178.0" layoutY="301.0" text="Digite qual a Matrícula do Aluno:" />
-      <Label layoutX="178.0" layoutY="119.0" text="Digite a Rua de Moradia do Aluno:" />
-      <Label layoutX="178.0" layoutY="206.0" text="Digite o Bairro de Moradia do Aluno:" />
-      <Label layoutX="178.0" layoutY="251.0" text="Digite o Nome do(s) Responsável(éis) do Aluno:" />
+      <VBox layoutX="91.0" layoutY="15.0" prefHeight="381.0" prefWidth="418.0" styleClass="cartao-interno">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="label-brutalista" stylesheets="@home.css" text="Digite o Nome do Aluno" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="idNomeAlu" prefHeight="19.0" prefWidth="198.0" styleClass="text-field-brutalista" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="label-brutalista" text="Digite o Nome do(s) Responsável(éis) do Aluno:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="idResponsavelAlu" styleClass="text-field-brutalista" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="label-brutalista" text="Digite a data de nascimento do Aluno:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <DatePicker fx:id="idDataNasAlu" prefHeight="39.0" prefWidth="258.0" styleClass="text-field-brutalista" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="label-brutalista" text="Digite qual o Turno de Ensino do Aluno:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="idTurnoAlu" styleClass="text-field-brutalista" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="label-brutalista" text="Matrícula do Aluno:" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="idMatriculaAlu" prefHeight="42.0" prefWidth="284.0" styleClass="text-field-brutalista" />
+                        <Button fx:id="btnCadastrarAlu" mnemonicParsing="false" prefHeight="44.0" prefWidth="70.0" styleClass="botao-destaque" text="Gerar">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btnCadastrarAlu1" mnemonicParsing="false" styleClass="botao-destaque" text="Cadastrar">
+               <VBox.margin>
+                  <Insets left="143.0" top="8.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>
