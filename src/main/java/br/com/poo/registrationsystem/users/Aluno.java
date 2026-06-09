@@ -61,9 +61,7 @@ public class Aluno {
     }
 
     public String getMatricula() {
-
-//        Validacoes.numMatricula();
-
         return matricula;
     }
+
 }
