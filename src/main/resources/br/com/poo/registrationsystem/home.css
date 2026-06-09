@@ -127,11 +127,10 @@
 }
 
 .label-brutalista {
-    -fx-font-family: 'Arial Black', 'Impact', sans-serif;
-    -fx-font-color: #FFFFFF
-    -fx-font-size: 12px;
-    -fx-text-fill: #1C1C1C;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #FFFFFF;
 }
 
 .cartao-interno {
@@ -141,4 +140,68 @@
     -fx-border-radius: 12px;
     -fx-background-radius: 12px;
     -fx-effect: dropshadow(one-pass-box, black, 0, 0, 6, 6);
+}
+
+.lista-brutalista {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #1C1C1C;
+    -fx-border-width: 3px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.lista-brutalista .list-cell {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1C1C1C;
+    -fx-padding: 12px;
+    -fx-border-color: transparent transparent #1C1C1C transparent;
+    -fx-border-width: 1px;
+    -fx-background-color: #FFFFFF;
+}
+
+
+.lista-brutalista .list-cell:hover {
+    -fx-background-color: #F0F0F0;
+}
+
+
+.lista-brutalista .list-cell:selected {
+    -fx-background-color: #6640C8;
+    -fx-text-fill: #FFFFFF;
+}
+
+.bot-roxo {
+    -fx-background-color: #6640C8;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-border-color: #1C1C1C; /
+    -fx-border-width: 3px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+
+
+    -fx-effect: dropshadow(one-pass-box, #1C1C1C, 0, 0, 4, 4);
+}
+
+
+.bot-roxo:hover {
+    -fx-background-color: #7E56E3;
+}
+
+
+.bot-roxo:pressed {
+    -fx-background-color: #5230A6;
+
+
+    -fx-translate-x: 4px;
+    -fx-translate-y: 4px;
+
+
+    -fx-effect: dropshadow(one-pass-box, transparent, 0, 0, 0, 0);
 }

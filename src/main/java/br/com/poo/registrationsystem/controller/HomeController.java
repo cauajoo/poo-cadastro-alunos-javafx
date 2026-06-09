@@ -28,7 +28,7 @@ public class HomeController {
     private ImageView idImgPerfil;
 
     @FXML
-    private ImageView idImgSair;
+    private Button idImgSair;
 
     @FXML
     private AnchorPane idTela;
@@ -55,31 +55,53 @@ public class HomeController {
         }
     }
 
-    @FXML
-    private void mediasAlunos() {
-        carregarPagina("mediasAlunosView.fxml");
+    private void alterarBotaoAtivo(Button botaoAtivo) {
+
+        idBtmCadNota.getStyleClass().setAll("button", "botao-menu");
+        idBtmMed.getStyleClass().setAll("button", "botao-menu");
+        idBtmAluno.getStyleClass().setAll("button", "botao-menu");
+
+        idBtmCadAluno.getStyleClass().setAll("button", "botao-destaque");
+
+        if (botaoAtivo == idBtmCadAluno) {
+
+            idBtmCadAluno.getStyleClass().setAll("button", "botao-destaque");
+
+        } else if (botaoAtivo != null) {
+
+            botaoAtivo.getStyleClass().setAll("button", "botao-menu-ativo");
+
+        }
     }
 
     @FXML
     private void cadastrarAlunos() {
+        alterarBotaoAtivo(idBtmCadAluno);
         carregarPagina("cadastroAlunoView.fxml");
     }
 
     @FXML
-    private void alunosCadastrados() {
-        carregarPagina("alunosView.fxml");
+    private void cadastrarNotas() {
+        alterarBotaoAtivo(idBtmCadNota);
+        carregarPagina("cadastroNotasView.fxml");
     }
 
     @FXML
-    private void cadastrarNotas() {
-        carregarPagina("cadastroNotasView.fxml");
+    private void mediasAlunos() {
+        alterarBotaoAtivo(idBtmMed);
+        carregarPagina("mediasAlunosView.fxml");
+    }
+
+    @FXML
+    private void alunosCadastrados() {
+        alterarBotaoAtivo(idBtmAluno);
+        carregarPagina("alunosView.fxml");
     }
 
     @FXML
     private void realizarLogout() {
         try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/poo/registrationsystem/view/loginView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/poo/registrationsystem/loginView.fxml"));
             Parent root = loader.load();
 
             Stage stageAtual = (Stage) idImgSair.getScene().getWindow();
@@ -88,7 +110,7 @@ public class HomeController {
             stageAtual.setTitle("Login - Sistema de Registro");
             stageAtual.show();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             System.err.println("Erro ao realizar logout: " + e.getMessage());
         }
