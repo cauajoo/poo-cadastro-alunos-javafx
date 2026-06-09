@@ -1,4 +1,76 @@
 package br.com.poo.registrationsystem.controller;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+
 public class HomeController {
+
+    @FXML
+    private Button idBtmAluno;
+
+    @FXML
+    private Button idBtmCadAluno;
+
+    @FXML
+    private Button idBtmCadNota;
+    @FXML
+    private Button idBtmMed;
+
+    @FXML
+    private ImageView idImgPerfil;
+
+    @FXML
+    private ImageView idImgSair;
+
+    @FXML
+    private AnchorPane idTela;
+
+    @FXML
+    private void carregarPagina(String arquivoFxml) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/poo/registrationsystem/" + arquivoFxml));
+            Parent root = loader.load();
+
+            idTela.getChildren().clear();
+
+            AnchorPane.setTopAnchor(root, 0.0);
+            AnchorPane.setBottomAnchor(root, 0.0);
+            AnchorPane.setLeftAnchor(root, 0.0);
+            AnchorPane.setRightAnchor(root, 0.0);
+
+            idTela.getChildren().add(root);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Erro ao carregar a página: " + arquivoFxml);
+        }
+    }
+
+    @FXML
+    private void mediasAlunos() {
+        carregarPagina("mediasAlunosView.fxml");
+    }
+
+    @FXML
+    private void cadastrarAlunos() {
+        carregarPagina("cadastroAlunoView.fxml");
+    }
+
+    @FXML
+    private void alunosCadastrados() {
+        carregarPagina("alunosView.fxml");
+    }
+
+    @FXML
+    private void cadastrarNotas() {
+        carregarPagina("cadastroNotasView.fxml");
+    }
+
+
+
 }
