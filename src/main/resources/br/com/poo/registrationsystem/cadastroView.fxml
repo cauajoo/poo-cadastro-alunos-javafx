@@ -44,7 +44,7 @@
       </Label>
       <PasswordField fx:id="idSenhaCad" layoutX="500.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Mínimo de 8 caracteres..." />
       <PasswordField fx:id="idConfirmCad" layoutX="695.0" layoutY="514.0" prefHeight="35.0" prefWidth="155.0" promptText="Repita a senha criada..." />
-      <Button fx:id="idBtmCad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="idBtmCad" layoutX="600.0" layoutY="622.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="40.0" prefWidth="150.0" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Artifakt Element Bold" size="19.0" />
          </font></Button>
