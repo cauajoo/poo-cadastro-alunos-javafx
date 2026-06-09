@@ -58,8 +58,8 @@
          </font></Label>
       <TextField fx:id="idUsuarioLog" layoutX="371.0" layoutY="300.0" prefHeight="35.0" prefWidth="250.0" />
       <PasswordField fx:id="idSenhaLog" layoutX="372.0" layoutY="375.0" prefHeight="35.0" prefWidth="250.0" />
-      <Hyperlink fx:id="idLinkLog" layoutX="515.0" layoutY="432.0" text="Clique Aqui!!" />
-      <Button fx:id="idBtnLog" layoutX="421.0" layoutY="491.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Entrar" textFill="WHITE">
+      <Hyperlink fx:id="idLinkLog" layoutX="515.0" layoutY="432.0" text="Clique Aqui!!" onAction="#linkarCadastro"/>
+      <Button fx:id="idBtnLog" layoutX="421.0" layoutY="491.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Entrar" textFill="WHITE" onAction="#entrarLogin">
          <font>
             <Font name="Artifakt Element Bold" size="19.0" />
          </font></Button>
