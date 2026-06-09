@@ -84,6 +84,7 @@ public class CadastroAlunoController {
 //                    msgErroLog.setText("Senhas iguais!");
 //                }
 //            }
+
 //        });
 //    }
 

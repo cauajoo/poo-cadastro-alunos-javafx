@@ -166,6 +166,7 @@ public class Validacoes {
         }else {
             System.out.println("Erro: Só é possível digitar Manhã ou Tarde!");
         }
+        return turno;
     }
 
 }
