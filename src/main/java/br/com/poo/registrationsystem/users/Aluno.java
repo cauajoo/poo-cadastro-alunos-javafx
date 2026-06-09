@@ -1,4 +1,6 @@
 package br.com.poo.registrationsystem.users;
+import br.com.poo.registrationsystem.users.Notas;
+import br.com.poo.registrationsystem.validation.Validacoes;
 
 import java.time.LocalDate;
 
@@ -59,6 +61,9 @@ public class Aluno {
     }
 
     public String getMatricula() {
+
+        Validacoes.numMatricula();
+
         return matricula;
     }
 }

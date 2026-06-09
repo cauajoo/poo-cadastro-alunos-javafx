@@ -222,6 +222,8 @@ public class CadastroController {
 
         if (erroSenha != null) { mostrarErro(erroSenha); return; }
 
+//        String usuarioRepti = Validacoes.validarLogin(email, senha);
+
         Usuario usuario = new Usuario(nome, email, dataNascimento, telefone, cpf, senha);
 
         Repositorio.salvarUsuario(usuario);
@@ -275,6 +277,5 @@ public class CadastroController {
 
         }
     }
-
 
 }

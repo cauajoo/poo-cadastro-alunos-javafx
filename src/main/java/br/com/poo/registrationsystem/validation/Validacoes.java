@@ -3,7 +3,9 @@ package br.com.poo.registrationsystem.validation;
 import br.com.poo.registrationsystem.users.Usuario;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Validacoes {
 
@@ -16,7 +18,6 @@ public class Validacoes {
                 return usuario;
 
             }
-
         }
 
         return null;
@@ -146,5 +147,17 @@ public class Validacoes {
 
         return email.matches(expressaoRegular);
     }
+
+    public static void numMatricula() {
+
+        Random random = new Random();
+
+        for (int i = 0; i < 5; i++) {
+
+            int matricula = random.nextInt(100) + 1;
+        }
+    }
+
+
 
 }

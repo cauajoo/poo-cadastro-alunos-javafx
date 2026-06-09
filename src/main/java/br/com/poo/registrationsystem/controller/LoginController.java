@@ -6,6 +6,7 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -14,6 +15,7 @@ import javafx.util.Duration;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.util.List;
 
 import static br.com.poo.registrationsystem.repository.Repositorio.buscarTodoUsuario;
@@ -63,39 +65,13 @@ public class LoginController {
     }
 
     @FXML
-    public void realizarLogin(ActionEvent event) {
-
-        String email = idUsuarioLog.getText();
-        String senha = idSenhaLog.getText();
-
-
-        for (Usuario usuario : usuarios) {
-
-            if (usuario.getEmail().equals(email)
-                    && usuario.getSenha().equals(senha)) {
-
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText(
-                        "Bem-vindo, " + usuario.getNome()
-                );
-            }else {
-
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText(
-                        "Usuário ou Senha Incorretos.");
-                alert.showAndWait();
-            }
-        }
-    }
-
-    @FXML
-    public void linkarCadastro(ActionEvent event) {
+    public void linkarCadastro(javafx.event.ActionEvent actionEvent) {
 
         try {
 
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource(
-                            "/br/com/poo/registrationsystem/view/cadastroView.fxml"
+                            "/br/com/poo/registrationsystem/cadastroView.fxml"
                     )
             );
 
@@ -159,4 +135,33 @@ public class LoginController {
         transition.play();
     }
 
+    @FXML
+    public void entrarLogin(javafx.event.ActionEvent actionEvent) {
+
+        String email = idUsuarioLog.getText();
+        String senha = idSenhaLog.getText();
+
+
+        List<Usuario> usuarios = buscarTodoUsuario();
+
+        Usuario usuarioLogado = usuarios.stream()
+                .filter(u -> u.getEmail().equals(email) && u.getSenha().equals(senha))
+                .findFirst()
+                .orElse(null);
+
+        if (usuarioLogado != null) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Sucesso");
+            alert.setHeaderText(null);
+            alert.setContentText("Bem-vindo, " + usuarioLogado.getNome() + "!");
+            alert.showAndWait();
+
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro de Autenticação");
+            alert.setHeaderText(null);
+            alert.setContentText("Usuário ou Senha Incorretos.");
+            alert.showAndWait();
+        }
+    }
 }
