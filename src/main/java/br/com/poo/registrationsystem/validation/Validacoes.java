@@ -1,5 +1,6 @@
 package br.com.poo.registrationsystem.validation;
 
+import br.com.poo.registrationsystem.users.Aluno;
 import br.com.poo.registrationsystem.users.Usuario;
 
 import java.time.LocalDate;
@@ -144,29 +145,90 @@ public class Validacoes {
         String expressaoRegular = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
 
         return email.matches(expressaoRegular);
+
     }
 
-    public static int gerarMatricula() {
+    public static boolean existeMatricula(List<Aluno> alunos, String matricula) {
 
-        Random random = new Random();
+        if (alunos == null || matricula == null) return false;
 
-        return random.nextInt(9000) + 10000;
+        return alunos.stream()
+                .anyMatch(a -> matricula.equals(a.getMatricula()));
+
     }
 
-    public static String validarTurno(String turno) {
+    public static String validaMatriculaExistente(List<Aluno> alunos, String matricula) {
 
-        if (turno == null) {
+        if (matricula == null || matricula.trim().isEmpty()) {
 
-            return ("Erro: Turno inválido!");
+            return "A matrícula não pode ser vazia!";
+
         }
-        turno = turno.trim().toLowerCase();
 
-        if (turno.equals("Manhã") || turno.equals("Tarde")) {
-            System.out.println("Turno válido");
-        }else {
-            System.out.println("Erro: Só é possível digitar Manhã ou Tarde!");
+        if (existeMatricula(alunos, matricula)) {
+
+            return "Esta matrícula já está em uso!";
+
         }
-        return turno;
+
+        return null;
+
     }
 
+    public static String validaCampoVazio(String texto, String nomeDoCampo) {
+
+        if (texto == null || texto.trim().isEmpty()) {
+
+            return "O campo " + nomeDoCampo + " é obrigatório!";
+
+        }
+
+        return null;
+
+    }
+
+    public static String validaTurno(String turno) {
+
+        if (turno == null || turno.trim().isEmpty()) {
+
+            return "O Turno é obrigatório!";
+
+        }
+
+        String turnoFormatado = turno.trim().toLowerCase();
+
+        if (!turnoFormatado.equals("manhã") && !turnoFormatado.equals("manha")
+                && !turnoFormatado.equals("tarde") && !turnoFormatado.equals("noite")) {
+
+            return "Turno inválido! Digite Manhã, Tarde ou Noite.";
+
+        }
+        return null;
+    }
+
+    public static String validaNota(String notaTexto, String nomeDaUnidade) {
+
+        if (notaTexto == null || notaTexto.trim().isEmpty()) {
+
+            return "A nota da " + nomeDaUnidade + " não pode ser vazia!";
+
+        }
+
+        try {
+
+            double nota = Double.parseDouble(notaTexto.trim().replace(",", "."));
+
+            if (nota < 0 || nota > 10) {
+
+                return "A nota da " + nomeDaUnidade + " deve estar entre 0 e 10!";
+
+            }
+
+            return null;
+
+        } catch (NumberFormatException e) {
+
+            return "A nota da " + nomeDaUnidade + " deve ser um número válido!";
+        }
+    }
 }
